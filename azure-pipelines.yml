@@ -1,0 +1,142 @@
+resources:
+
+- repo: self
+
+queue:
+
+  name: Hosted
+
+  demands: 
+
+  - npm
+
+  - node.js
+
+
+
+steps:
+
+- task: NodeTool@0
+
+  displayName: 'Use Node 8.x'
+
+  inputs:
+
+    versionSpec: 8.x
+
+
+
+
+
+- task: Npm@1
+
+  displayName: 'Set "progress=false"'
+
+  inputs:
+
+    command: custom
+
+
+
+    verbose: false
+
+
+
+    customCommand: 'set "progress=false"'
+
+
+
+
+
+- task: Npm@1
+
+  displayName: 'npm install'
+
+  inputs:
+
+    verbose: false
+
+
+
+
+
+- task: Gulp@0
+
+  displayName: 'Clean bundle'
+
+  inputs:
+
+    targets: clean
+
+
+
+
+
+- task: Gulp@0
+
+  displayName: 'Create Bundle'
+
+  inputs:
+
+    targets: bundle
+
+
+
+    arguments: '--ship'
+
+
+
+    publishJUnitResults: true
+
+
+
+
+
+- task: Gulp@0
+
+  displayName: 'gulp package-solution'
+
+  inputs:
+
+    targets: 'package-solution'
+
+
+
+    arguments: '--ship'
+
+
+
+
+
+- task: CopyFiles@2
+
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)/drop'
+
+  inputs:
+
+    Contents: |
+     **\*.sppkg
+     CD-O365CDN.ps1
+          CD-SPOAppCatalog.ps1
+          **\*package-solution.json
+     **\*gulpfile.js
+
+
+
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/drop'
+
+
+
+
+
+- task: PublishBuildArtifacts@1
+
+  displayName: 'Publish artifacts: drop'
+
+  inputs:
+
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/drop'
+
+
+
+
