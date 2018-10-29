@@ -4,7 +4,7 @@
 Param(
     [string]$username, # => Office 365 Username
     [string]$psw, # => Office 365 Password
-    [string]$cdnSite, # => CDN SharePoint site "https://technoverthyd.sharepoint.com/"
+    [string]$cdnSite, # => CDN SharePoint site "https://praveenbattula.sharepoint.com/"
     [string]$cdnLib, # => Document library and eventual folders "cdn/SPFx-deploy"
     [string]$releaseFolder, # => SC folder where the files are extracted
     [string]$releaseName

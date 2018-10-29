@@ -1,8 +1,12 @@
+                             ###########################
+                                # SPOAppCatalog.ps1 #
+                             ###########################
+
 #################
 # Variables #
 #################
 # App Catalog site #
-$catalogSite = "https://technoverthyd.sharepoint.com/sites/praveen" 
+$catalogSite = "https://praveenbattula.sharepoint.com/sites/praveen" 
 
 
 Write-Host ***************************************** -ForegroundColor Yellow
