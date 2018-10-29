@@ -1,26 +1,22 @@
-## hello-world
+## SharePoint Framework Solution Full Deployment Automation
 
-This is where you include your WebPart documentation.
+This is a sample project which created by Youmen SharePoint Generator with deployment automation script. 
 
-### Building the code
+### To run the project
 
-```bash
-git clone the repo
-npm i
-npm i -g gulp
-gulp
-```
+gulp serve
 
-This package produces the following:
+### To package the project
+* gulp clean
+* gulp bundle --ship
+* gulp package-solution --ship
 
-* lib/* - intermediate-stage commonjs build artifacts
-* dist/* - the bundled script, along with other resources
-* deploy/* - all resources which should be uploaded to a CDN.
+OR 
 
-### Build options
+* npm run package
 
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
+### For More information about how to use the project to deployment automation
+
+Use my article for all the steps and instructions: 
+https://www.linkedin.com/pulse/spfx-solution-deployment-automation-process-end-praveen-battula/
+
