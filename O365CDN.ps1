@@ -7,7 +7,7 @@
 #################
 # CDN SPO site #
 
-$cdnSite = "https://technoverthyd.sharepoint.com/sites/praveen"
+$cdnSite = "https://praveenbattula.sharepoint.com/sites/praveen"
 $cdnLib = "assets/SPFx" # => Document library and eventual folders
 
 

@@ -4,7 +4,7 @@
 Param(
     [string]$username, # => Office 365 Username
     [string]$psw, # => Office 365 Password
-    [string]$catalogSite, # => App Catalog site "https://technoverthyd.sharepoint.com/sites/apps"
+    [string]$catalogSite, # => App Catalog site "https://praveenbattula.sharepoint.com/sites/apps"
     [string]$releaseFolder, # => SC folder where the files are extracted
     [string]$releaseName
 )
