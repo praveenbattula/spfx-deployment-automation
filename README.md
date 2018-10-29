@@ -18,5 +18,10 @@ OR
 ### For More information about how to use the project to deployment automation
 
 Use my article for all the steps and instructions: 
+
+### Using PowerShell manual deployment using script: 
 https://www.linkedin.com/pulse/spfx-solution-deployment-automation-process-end-praveen-battula/
+
+### Using Azure DevOps to automate deployment End to End 
+https://www.linkedin.com/pulse/sharepoint-framework-deployment-part-2-automation-using-battula/
 
